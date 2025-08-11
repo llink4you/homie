@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMIE DIGITAL - Цифровые решения для бизнеса</title>
+    <meta name="description" content="Создаем лендинги, Telegram-ботов, ИИ-генераторы, скрипты и дизайн. Более 200 довольных клиентов.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#ffffff',
+                        foreground: '#030213',
+                        muted: {
+                            DEFAULT: '#ececf0',
+                            foreground: '#717182'
+                        },
+                        border: 'rgba(0, 0, 0, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+        }
+        
+        .gradient-bg-light {
+            background: linear-gradient(to right, #dbeafe, #f3e8ff);
+        }
+        
+        .backdrop-blur {
+            backdrop-filter: blur(8px);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .blur-circle {
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-6">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">HD</span>
+                </div>
+                <span class="text-xl font-bold gradient-text">
+                    HOMIE DIGITAL
+                </span>
+            </div>
+            <button onclick="window.open('https://t.me/homiegogolev', '_blank')" 
+                    class="gradient-bg hover:opacity-90 text-white px-6 py-2 rounded-lg flex items-center space-x-2 transition-opacity">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Связаться</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                        Создаем
+                        <span class="gradient-text"> цифровое </span>
+                        будущее вашего бизнеса
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Мы специализируемся на разработке современных веб-решений, 
+                        Telegram-ботов, ИИ-генераторов и автоматизации процессов, 
+                        которые помогают бизнесу расти и развиваться.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="window.open('https://t.me/homiegogolev', '_blank')" 
+                            class="gradient-bg hover:opacity-90 text-white px-8 py-4 rounded-lg flex items-center justify-center space-x-2 text-lg transition-opacity">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Начать проект</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="relative z-10">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Digital workspace"
+                         class="rounded-2xl shadow-2xl w-full h-[500px] object-cover">
+                </div>
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 blur-circle"></div>
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-20 blur-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center space-y-2">
+                <div class="text-4xl font-bold gradient-text">200+</div>
+                <p class="text-gray-600">Довольных клиентов</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-4xl font-bold gradient-text">350+</div>
+                <p class="text-gray-600">Реализованных проектов</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-4xl font-bold gradient-text">98%</div>
+                <p class="text-gray-600">Положительных отзывов</p>
+            </div>
+            <div class="text-center space-y-2">
+                <div class="text-4xl font-bold gradient-text">24/7</div>
+                <p class="text-gray-600">Поддержка клиентов</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container mx-auto px-4 py-20">
+        <div class="text-center space-y-4 mb-16">
+
+            <h2 class="text-4xl font-bold">Что мы умеем делать</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Предлагаем полный спектр цифровых услуг для развития вашего бизнеса
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Лендинги -->
+            <div class="card-hover bg-white/80 backdrop-blur rounded-2xl p-8 space-y-6 border-0">
+                <div class="w-16 h-16 gradient-bg-light rounded-2xl flex items-center justify-center text-blue-600 hover-scale">
+                    <i data-lucide="code" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">Лендинги</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Создаем высококонверсионные посадочные страницы, которые превращают посетителей в клиентов
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Responsive дизайн
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        SEO оптимизация
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Быстрая загрузка
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telegram-боты -->
+            <div class="card-hover bg-white/80 backdrop-blur rounded-2xl p-8 space-y-6 border-0">
+                <div class="w-16 h-16 gradient-bg-light rounded-2xl flex items-center justify-center text-blue-600 hover-scale">
+                    <i data-lucide="bot" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">Telegram-боты</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Разрабатываем умных ботов для автоматизации бизнес-процессов и взаимодействия с клиентами
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Интеграции с API
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Базы данных
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Аналитика
+                    </div>
+                </div>
+            </div>
+
+            <!-- ИИ-генераторы -->
+            <div class="card-hover bg-white/80 backdrop-blur rounded-2xl p-8 space-y-6 border-0">
+                <div class="w-16 h-16 gradient-bg-light rounded-2xl flex items-center justify-center text-blue-600 hover-scale">
+                    <i data-lucide="zap" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">ИИ-генераторы</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Создаем интеллектуальные решения на базе искусственного интеллекта для вашего бизнеса
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        GPT интеграции
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Обработка данных
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Машинное обучение
+                    </div>
+                </div>
+            </div>
+
+            <!-- Скрипты -->
+            <div class="card-hover bg-white/80 backdrop-blur rounded-2xl p-8 space-y-6 border-0">
+                <div class="w-16 h-16 gradient-bg-light rounded-2xl flex items-center justify-center text-blue-600 hover-scale">
+                    <i data-lucide="code" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">Скрипты</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Разрабатываем автоматизированные решения и скрипты для оптимизации рабочих процессов
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Python/JavaScript
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Автоматизация
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Интеграции
+                    </div>
+                </div>
+            </div>
+
+            <!-- Дизайн -->
+            <div class="card-hover bg-white/80 backdrop-blur rounded-2xl p-8 space-y-6 border-0">
+                <div class="w-16 h-16 gradient-bg-light rounded-2xl flex items-center justify-center text-blue-600 hover-scale">
+                    <i data-lucide="palette" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">Дизайн</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Создаем современный и функциональный дизайн, который подчеркивает уникальность вашего бренда
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        UI/UX дизайн
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Брендинг
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <div class="w-1.5 h-1.5 gradient-bg rounded-full mr-3"></div>
+                        Прототипирование
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-4 py-20">
+        <div class="gradient-bg rounded-3xl p-12 text-center text-white">
+            <div class="max-w-3xl mx-auto space-y-8">
+                <h2 class="text-4xl font-bold">
+                    Готовы начать ваш проект?
+                </h2>
+                <p class="text-xl opacity-90">
+                    Свяжитесь с нами сегодня и получите бесплатную консультацию по вашему проекту. 
+                    Мы поможем воплотить ваши идеи в жизнь!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.open('https://t.me/homiegogolev', '_blank')" 
+                            class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Написать в Telegram</span>
+                    </button>
+<button onclick="window.open('https://t.me/homiedigital, '_blank')" 
+                            class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Телеграм-канал</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 py-12 border-t border-gray-200">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">HD</span>
+                    </div>
+                    <span class="font-bold gradient-text">
+                        HOMIE DIGITAL
+                    </span>
+                </div>
+                <p class="text-gray-600">
+                    Создаем цифровые решения, которые помогают бизнесу расти и развиваться в современном мире.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="font-semibold">Услуги</h4>
+                <div class="space-y-2 text-gray-600">
+                    <div>Разработка лендингов</div>
+                    <div>Telegram-боты</div>
+                    <div>ИИ-генераторы</div>
+                    <div>Автоматизация</div>
+                    <div>Дизайн</div>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="font-semibold">Контакты</h4>
+                <div class="space-y-2 text-gray-600">
+                    <div>📱 Telegram: @homiegogolev</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
+            <p>&copy; 2024 HOMIE DIGITAL. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
